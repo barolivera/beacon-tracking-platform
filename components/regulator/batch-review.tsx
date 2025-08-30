@@ -82,16 +82,16 @@ export function BatchReview() {
                       <Badge className="bg-yellow-100 text-yellow-800">Pending Review</Badge>
                     </div>
                     <p className="text-sm font-medium">{batch.productName}</p>
-                    <p className="text-xs text-muted-foreground">Formula: {batch.formula}</p>
+                    <p className="text-xs text-muted-foreground font-mono">Formula: {batch.formula}</p>
 
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
                       <div className="flex items-center gap-1">
                         <Building2 className="h-4 w-4" />
-                        <span>{batch.laboratoryName}</span>
+                        <span className="font-mono">{batch.laboratoryName}</span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Calendar className="h-4 w-4" />
-                        <span>Submitted: {batch.createdAt.toLocaleDateString()}</span>
+                        <span className="font-mono">Submitted: {batch.createdAt.toLocaleDateString()}</span>
                       </div>
                     </div>
                   </div>
@@ -103,17 +103,17 @@ export function BatchReview() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm bg-muted/50 p-3 rounded">
-                  <div>
+                  <div className="font-mono">
                     <span className="font-medium">Production Date:</span>
                     <br />
                     {batch.productionDate.toLocaleDateString()}
                   </div>
-                  <div>
+                  <div className="font-mono">
                     <span className="font-medium">Quantity:</span>
                     <br />
                     {batch.quantity.toLocaleString()} {batch.unit}
                   </div>
-                  <div>
+                  <div className="font-mono">
                     <span className="font-medium">Quality Tests:</span>
                     <br />
                     {batch.qualityCertificates.length} completed
