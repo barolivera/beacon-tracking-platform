@@ -132,13 +132,13 @@ export function RegulatorDashboard() {
                   <div className="space-y-2 text-sm">
                     <div className="border rounded p-2">
                       <div className="font-medium">Recent Audit: PT-2024-001</div>
-                      <div className="text-muted-foreground">Approved by Carlos Rodriguez</div>
-                      <div className="text-xs text-muted-foreground">2 hours ago</div>
+                      <div className="text-muted-foreground font-mono">Approved by Carlos Rodriguez</div>
+                      <div className="text-xs text-muted-foreground font-mono">2 hours ago</div>
                     </div>
                     <div className="border rounded p-2">
                       <div className="font-medium">Quality Review: PT-2024-002</div>
-                      <div className="text-muted-foreground">Pending quality certificates</div>
-                      <div className="text-xs text-muted-foreground">1 day ago</div>
+                      <div className="text-muted-foreground font-mono">Pending quality certificates</div>
+                      <div className="text-xs text-muted-foreground font-mono">1 day ago</div>
                     </div>
                   </div>
                 </div>
