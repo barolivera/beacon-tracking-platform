@@ -75,7 +75,7 @@ export function BatchList({ refreshTrigger }: BatchListProps) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
+        <CardTitle className="flex items-center gap-2 font-sans">
           <Package className="h-5 w-5" />
           Your Batches ({batches.length})
         </CardTitle>
@@ -94,7 +94,7 @@ export function BatchList({ refreshTrigger }: BatchListProps) {
                     </Badge>
                   </div>
                   <p className="text-sm text-muted-foreground">{batch.productName}</p>
-                  <p className="text-xs text-muted-foreground">Formula: {batch.formula}</p>
+                  <p className="text-xs text-muted-foreground font-mono">Formula: {batch.formula}</p>
                 </div>
                 <Button variant="outline" size="sm">
                   <Eye className="h-4 w-4 mr-2" />
@@ -105,11 +105,11 @@ export function BatchList({ refreshTrigger }: BatchListProps) {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4 text-muted-foreground" />
-                  <span>Produced: {batch.productionDate.toLocaleDateString()}</span>
+                  <span className="font-mono">Produced: {batch.productionDate.toLocaleDateString()}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Package className="h-4 w-4 text-muted-foreground" />
-                  <span>
+                  <span className="font-mono">
                     Quantity: {batch.quantity.toLocaleString()} {batch.unit}
                   </span>
                 </div>
@@ -128,8 +128,8 @@ export function BatchList({ refreshTrigger }: BatchListProps) {
               )}
 
               <div className="flex items-center justify-between text-xs text-muted-foreground">
-                <span>Created: {batch.createdAt.toLocaleString()}</span>
-                <span>Quality Tests: {batch.qualityCertificates.length}</span>
+                <span className="font-mono">Created: {batch.createdAt.toLocaleString()}</span>
+                <span className="font-mono">Quality Tests: {batch.qualityCertificates.length}</span>
               </div>
             </div>
           ))}
