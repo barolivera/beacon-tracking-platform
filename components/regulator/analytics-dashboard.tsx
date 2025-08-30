@@ -191,7 +191,7 @@ export function AnalyticsDashboard() {
             <CardTitle>Batch Status Distribution</CardTitle>
             <CardDescription>Current status of all registered batches</CardDescription>
           </CardHeader>
-          <CardContent className="font-mono leading-3">
+          <CardContent className="font-mono leading-3 text-xs">
             <ResponsiveContainer width="100%" height={300}>
               <PieChart>
                 <Pie
@@ -220,7 +220,7 @@ export function AnalyticsDashboard() {
             <CardTitle>Monthly Review Trends</CardTitle>
             <CardDescription>Batch approvals and rejections over time</CardDescription>
           </CardHeader>
-          <CardContent className="font-mono">
+          <CardContent className="font-mono text-xs">
             <ResponsiveContainer width="100%" height={300}>
               <BarChart data={analytics.monthlyTrends}>
                 <CartesianGrid strokeDasharray="3 3" />
