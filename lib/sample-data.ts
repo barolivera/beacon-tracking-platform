@@ -1,0 +1,246 @@
+import type { DrugBatch } from "./blockchain-registry"
+
+export const sampleBatches: DrugBatch[] = [
+  {
+    id: "BTC-2024-001",
+    blockchainId: "0x1a2b3c4d5e6f7890abcdef1234567890abcdef12",
+    drugName: "Amoxicillin 500mg",
+    manufacturer: "PharmaCorp Labs",
+    batchNumber: "AMX-240115-001",
+    manufacturingDate: "2024-01-15",
+    expiryDate: "2026-01-15",
+    quantity: 10000,
+    status: "approved",
+    qrCode: "QR-AMX-240115-001",
+    patientCode: "PT-AMX-001",
+    qualityCertificate: {
+      certificateId: "QC-AMX-240115-001",
+      testDate: "2024-01-16",
+      results: "All parameters within acceptable limits",
+      approvedBy: "Dr. Maria Rodriguez",
+    },
+    distributionLog: [
+      {
+        timestamp: "2024-01-20T10:00:00Z",
+        location: "PharmaCorp Warehouse",
+        action: "Manufactured",
+        handler: "Production Team A",
+      },
+      {
+        timestamp: "2024-01-22T14:30:00Z",
+        location: "Central Distribution Hub",
+        action: "Shipped",
+        handler: "Logistics Coordinator",
+      },
+      {
+        timestamp: "2024-01-25T09:15:00Z",
+        location: "Hospital San Martin",
+        action: "Received",
+        handler: "Pharmacy Department",
+      },
+    ],
+    auditTrail: [
+      {
+        timestamp: "2024-01-16T08:00:00Z",
+        action: "Batch Created",
+        user: "lab@pharmacorp.com",
+        details: "Initial batch registration",
+      },
+      {
+        timestamp: "2024-01-17T11:30:00Z",
+        action: "Quality Test Completed",
+        user: "qc@pharmacorp.com",
+        details: "All quality parameters passed",
+      },
+      {
+        timestamp: "2024-01-18T16:45:00Z",
+        action: "Approved by ANMAT",
+        user: "inspector@anmat.gov.ar",
+        details: "Regulatory approval granted",
+      },
+    ],
+  },
+  {
+    id: "BTC-2024-002",
+    blockchainId: "0x2b3c4d5e6f7890abcdef1234567890abcdef1234",
+    drugName: "Ibuprofen 400mg",
+    manufacturer: "MediLab Industries",
+    batchNumber: "IBU-240118-002",
+    manufacturingDate: "2024-01-18",
+    expiryDate: "2025-12-18",
+    quantity: 5000,
+    status: "pending",
+    qrCode: "QR-IBU-240118-002",
+    patientCode: "PT-IBU-002",
+    qualityCertificate: {
+      certificateId: "QC-IBU-240118-002",
+      testDate: "2024-01-19",
+      results: "Pending final dissolution test",
+      approvedBy: "Dr. Carlos Mendez",
+    },
+    distributionLog: [
+      {
+        timestamp: "2024-01-20T08:00:00Z",
+        location: "MediLab Production Facility",
+        action: "Manufactured",
+        handler: "Production Team B",
+      },
+    ],
+    auditTrail: [
+      {
+        timestamp: "2024-01-19T10:00:00Z",
+        action: "Batch Created",
+        user: "lab@medilab.com",
+        details: "Initial batch registration",
+      },
+      {
+        timestamp: "2024-01-20T14:20:00Z",
+        action: "Quality Testing Started",
+        user: "qc@medilab.com",
+        details: "Comprehensive quality testing initiated",
+      },
+    ],
+  },
+  {
+    id: "BTC-2024-003",
+    blockchainId: "0x3c4d5e6f7890abcdef1234567890abcdef123456",
+    drugName: "Paracetamol 500mg",
+    manufacturer: "BioPharm Solutions",
+    batchNumber: "PAR-240120-003",
+    manufacturingDate: "2024-01-20",
+    expiryDate: "2026-06-20",
+    quantity: 15000,
+    status: "rejected",
+    qrCode: "QR-PAR-240120-003",
+    patientCode: "PT-PAR-003",
+    qualityCertificate: {
+      certificateId: "QC-PAR-240120-003",
+      testDate: "2024-01-21",
+      results: "Dissolution rate below specification",
+      approvedBy: "Dr. Ana Silva",
+    },
+    distributionLog: [
+      {
+        timestamp: "2024-01-22T12:00:00Z",
+        location: "BioPharm Warehouse",
+        action: "Quarantined",
+        handler: "Quality Control Team",
+      },
+    ],
+    auditTrail: [
+      {
+        timestamp: "2024-01-21T09:00:00Z",
+        action: "Batch Created",
+        user: "lab@biopharm.com",
+        details: "Initial batch registration",
+      },
+      {
+        timestamp: "2024-01-22T15:30:00Z",
+        action: "Quality Test Failed",
+        user: "qc@biopharm.com",
+        details: "Dissolution test failed - batch rejected",
+      },
+      {
+        timestamp: "2024-01-23T10:15:00Z",
+        action: "Rejected by ANMAT",
+        user: "inspector@anmat.gov.ar",
+        details: "Batch rejected due to quality issues",
+      },
+    ],
+  },
+  {
+    id: "BTC-2024-004",
+    blockchainId: "0x4d5e6f7890abcdef1234567890abcdef12345678",
+    drugName: "Omeprazole 20mg",
+    manufacturer: "PharmaTech Ltd",
+    batchNumber: "OME-240125-004",
+    manufacturingDate: "2024-01-25",
+    expiryDate: "2026-01-25",
+    quantity: 8000,
+    status: "approved",
+    qrCode: "QR-OME-240125-004",
+    patientCode: "PT-OME-004",
+    qualityCertificate: {
+      certificateId: "QC-OME-240125-004",
+      testDate: "2024-01-26",
+      results: "All specifications met",
+      approvedBy: "Dr. Roberto Fernandez",
+    },
+    distributionLog: [
+      {
+        timestamp: "2024-01-28T11:00:00Z",
+        location: "PharmaTech Distribution Center",
+        action: "Manufactured",
+        handler: "Production Team C",
+      },
+      {
+        timestamp: "2024-01-30T16:20:00Z",
+        location: "Regional Pharmacy Chain",
+        action: "Distributed",
+        handler: "Distribution Manager",
+      },
+    ],
+    auditTrail: [
+      {
+        timestamp: "2024-01-26T07:30:00Z",
+        action: "Batch Created",
+        user: "lab@pharmatech.com",
+        details: "Initial batch registration",
+      },
+      {
+        timestamp: "2024-01-27T13:45:00Z",
+        action: "Quality Test Completed",
+        user: "qc@pharmatech.com",
+        details: "All quality parameters within limits",
+      },
+      {
+        timestamp: "2024-01-28T09:20:00Z",
+        action: "Approved by ANMAT",
+        user: "inspector@anmat.gov.ar",
+        details: "Regulatory approval granted",
+      },
+    ],
+  },
+]
+
+export const sampleNotifications = [
+  {
+    id: "1",
+    type: "warning" as const,
+    title: "Batch Quality Alert",
+    message: "Batch PAR-240120-003 has been flagged for quality issues",
+    timestamp: "2024-01-23T10:15:00Z",
+    read: false,
+  },
+  {
+    id: "2",
+    type: "success" as const,
+    title: "Batch Approved",
+    message: "Batch AMX-240115-001 has been approved by ANMAT",
+    timestamp: "2024-01-18T16:45:00Z",
+    read: true,
+  },
+  {
+    id: "3",
+    type: "info" as const,
+    title: "New Batch Submitted",
+    message: "Batch IBU-240118-002 submitted for review",
+    timestamp: "2024-01-19T10:00:00Z",
+    read: true,
+  },
+]
+
+export const sampleAnalytics = {
+  totalBatches: 156,
+  approvedBatches: 142,
+  pendingBatches: 8,
+  rejectedBatches: 6,
+  approvalRate: 91.0,
+  averageProcessingTime: 2.3,
+  monthlyTrends: [
+    { month: "Oct", approved: 45, rejected: 2, pending: 3 },
+    { month: "Nov", approved: 52, rejected: 1, pending: 4 },
+    { month: "Dec", approved: 48, rejected: 3, pending: 2 },
+    { month: "Jan", approved: 38, rejected: 2, pending: 8 },
+  ],
+}
