@@ -22,6 +22,41 @@ Continue building your app on:
 
 **[https://v0.app/chat/projects/bmRULBjqual](https://v0.app/chat/projects/bmRULBjqual)**
 
+## Local Development
+
+### Prerequisites
+
+- Node.js 18+ installed on your system
+- pnpm package manager
+
+### Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd beacon-tracking-platform
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   pnpm dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Available Scripts
+
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm lint` - Run ESLint
+
 ## How It Works
 
 1. Create and modify your project using [v0.app](https://v0.app)
