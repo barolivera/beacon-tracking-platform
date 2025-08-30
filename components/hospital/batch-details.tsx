@@ -42,7 +42,7 @@ export function BatchDetails({ batch }: BatchDetailsProps) {
           <CardDescription>Scan a batch ID to view detailed information</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="text-center py-8 text-muted-foreground">
+          <div className="text-center py-8 text-muted-foreground font-mono">
             No batch selected. Use the scanner above to verify a drug batch.
           </div>
         </CardContent>
