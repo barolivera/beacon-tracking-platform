@@ -63,7 +63,7 @@ export function DashboardLayout({ children, title }: DashboardLayoutProps) {
                 {user.organizationName && (
                   <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                     <Building2 className="h-3 w-3" />
-                    <span>{user.organizationName}</span>
+                    <span className="font-mono">{user.organizationName}</span>
                   </div>
                 )}
               </div>

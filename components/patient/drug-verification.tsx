@@ -113,7 +113,7 @@ export function DrugVerification({ onDrugVerified }: DrugVerificationProps) {
                 onChange={(e) => setVerificationCode(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Enter code from your prescription or medication package"
-                className="flex-1"
+                className="flex-1 font-mono"
               />
               <Button onClick={handleVerify} disabled={isLoading}>
                 {isLoading ? (

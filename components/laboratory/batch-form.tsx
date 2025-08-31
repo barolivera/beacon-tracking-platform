@@ -95,7 +95,7 @@ export function BatchForm({ onBatchCreated }: BatchFormProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="batchId">Batch ID *</Label>
-              <Input
+              <Input className="font-mono"
                 id="batchId"
                 value={formData.batchId}
                 onChange={(e) => handleInputChange("batchId", e.target.value)}
@@ -105,7 +105,7 @@ export function BatchForm({ onBatchCreated }: BatchFormProps) {
             </div>
             <div className="space-y-2">
               <Label htmlFor="productName">Product Name *</Label>
-              <Input
+              <Input className="font-mono"
                 id="productName"
                 value={formData.productName}
                 onChange={(e) => handleInputChange("productName", e.target.value)}
@@ -117,7 +117,7 @@ export function BatchForm({ onBatchCreated }: BatchFormProps) {
 
           <div className="space-y-2">
             <Label htmlFor="formula">Chemical Formula *</Label>
-            <Input
+            <Input className="font-mono"
               id="formula"
               value={formData.formula}
               onChange={(e) => handleInputChange("formula", e.target.value)}
@@ -129,7 +129,7 @@ export function BatchForm({ onBatchCreated }: BatchFormProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="productionDate">Production Date *</Label>
-              <Input
+              <Input className="font-mono"
                 id="productionDate"
                 type="date"
                 value={formData.productionDate}
@@ -139,7 +139,7 @@ export function BatchForm({ onBatchCreated }: BatchFormProps) {
             </div>
             <div className="space-y-2">
               <Label htmlFor="expiryDate">Expiry Date *</Label>
-              <Input
+              <Input className="font-mono"
                 id="expiryDate"
                 type="date"
                 value={formData.expiryDate}
@@ -152,7 +152,7 @@ export function BatchForm({ onBatchCreated }: BatchFormProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="quantity">Quantity *</Label>
-              <Input
+              <Input className="font-mono"
                 id="quantity"
                 type="number"
                 value={formData.quantity}

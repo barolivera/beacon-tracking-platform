@@ -107,7 +107,7 @@ export function BatchScanner({ onBatchFound }: BatchScannerProps) {
                 onChange={(e) => setBatchId(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Enter batch ID (e.g., PT-2024-001)"
-                className="flex-1"
+                className="flex-1 font-mono"
               />
               <Button onClick={handleScan} disabled={isLoading}>
                 {isLoading ? (

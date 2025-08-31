@@ -134,7 +134,7 @@ export function AdverseEventReport() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="medicationName">Medication Name *</Label>
-              <Input
+              <Input className="font-mono"
                 id="medicationName"
                 value={formData.medicationName}
                 onChange={(e) => handleInputChange("medicationName", e.target.value)}
@@ -144,7 +144,7 @@ export function AdverseEventReport() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="batchNumber">Batch Number (if available)</Label>
-              <Input
+              <Input className="font-mono"
                 id="batchNumber"
                 value={formData.batchNumber}
                 onChange={(e) => handleInputChange("batchNumber", e.target.value)}
@@ -155,7 +155,7 @@ export function AdverseEventReport() {
 
           <div className="space-y-2">
             <Label htmlFor="symptoms">Symptoms or Problems Experienced *</Label>
-            <Textarea
+            <Textarea className="font-mono"
               id="symptoms"
               value={formData.symptoms}
               onChange={(e) => handleInputChange("symptoms", e.target.value)}
@@ -188,7 +188,7 @@ export function AdverseEventReport() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="startDate">When did symptoms start?</Label>
-              <Input
+              <Input className="font-mono"
                 id="startDate"
                 type="date"
                 value={formData.startDate}
@@ -197,7 +197,7 @@ export function AdverseEventReport() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="contactInfo">Contact Information (optional)</Label>
-              <Input
+              <Input className="font-mono"
                 id="contactInfo"
                 value={formData.contactInfo}
                 onChange={(e) => handleInputChange("contactInfo", e.target.value)}
@@ -208,7 +208,7 @@ export function AdverseEventReport() {
 
           <div className="space-y-2">
             <Label htmlFor="additionalInfo">Additional Information</Label>
-            <Textarea
+            <Textarea className="font-mono"
               id="additionalInfo"
               value={formData.additionalInfo}
               onChange={(e) => handleInputChange("additionalInfo", e.target.value)}

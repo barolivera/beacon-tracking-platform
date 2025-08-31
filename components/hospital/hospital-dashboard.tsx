@@ -91,14 +91,14 @@ export function HospitalDashboard() {
                     <CheckCircle className="h-3 w-3 mr-1" />
                     Secure
                   </Badge>
-                  <span>Blockchain connection active</span>
+                  <span className="font-mono">Blockchain connection active</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <Badge variant="outline" className="bg-green-50">
                     <CheckCircle className="h-3 w-3 mr-1" />
                     Verified
                   </Badge>
-                  <span>All systems operational</span>
+                  <span className="font-mono">All systems operational</span>
                 </div>
               </div>
             </div>
@@ -106,19 +106,19 @@ export function HospitalDashboard() {
             <div className="space-y-2">
               <h4 className="font-medium">Recent Activity</h4>
               <div className="text-sm text-muted-foreground">
-                <p>• Last scan: PT-2024-001 (verified)</p>
-                <p>• Quality checks: All passed</p>
-                <p>• System uptime: 99.9%</p>
+                <p className="font-mono">• Last scan: PT-2024-001 (verified)</p>
+                <p className="font-mono">• Quality checks: All passed</p>
+                <p className="font-mono">• System uptime: 99.9%</p>
               </div>
             </div>
 
             <div className="space-y-2">
               <h4 className="font-medium">Quick Actions</h4>
               <div className="text-sm text-muted-foreground">
-                <p>• Scan batch ID below</p>
-                <p>• View detailed drug information</p>
-                <p>• Access complete audit trail</p>
-                <p>• Report any concerns</p>
+                <p className="font-mono">• Scan batch ID below</p>
+                <p className="font-mono">• View detailed drug information</p>
+                <p className="font-mono">• Access complete audit trail</p>
+                <p className="font-mono">• Report any concerns</p>
               </div>
             </div>
           </div>

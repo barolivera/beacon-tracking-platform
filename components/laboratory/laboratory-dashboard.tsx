@@ -28,7 +28,7 @@ export function LaboratoryDashboard() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">12</div>
-            <p className="text-xs text-muted-foreground">+2 from last month</p>
+            <p className="text-xs text-muted-foreground font-mono">+2 from last month</p>
           </CardContent>
         </Card>
 
@@ -39,7 +39,7 @@ export function LaboratoryDashboard() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-green-600">8</div>
-            <p className="text-xs text-muted-foreground">67% approval rate</p>
+            <p className="text-xs text-muted-foreground font-mono">67% approval rate</p>
           </CardContent>
         </Card>
 
@@ -50,7 +50,7 @@ export function LaboratoryDashboard() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-yellow-600">3</div>
-            <p className="text-xs text-muted-foreground">Awaiting review</p>
+            <p className="text-xs text-muted-foreground font-mono">Awaiting review</p>
           </CardContent>
         </Card>
 
@@ -61,7 +61,7 @@ export function LaboratoryDashboard() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-red-600">1</div>
-            <p className="text-xs text-muted-foreground">Requires attention</p>
+            <p className="text-xs text-muted-foreground font-mono">Requires attention</p>
           </CardContent>
         </Card>
       </div>
@@ -86,13 +86,13 @@ export function LaboratoryDashboard() {
                   <Badge variant="outline" className="bg-green-50">
                     Approved
                   </Badge>
-                  <span>PT-2024-001 approved by ANMAT</span>
+                  <span className="font-mono">PT-2024-001 approved by ANMAT</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <Badge variant="outline" className="bg-yellow-50">
                     Pending
                   </Badge>
-                  <span>PT-2024-002 under review</span>
+                  <span className="font-mono">PT-2024-002 under review</span>
                 </div>
               </div>
             </div>
@@ -100,18 +100,18 @@ export function LaboratoryDashboard() {
             <div className="space-y-2">
               <h4 className="font-medium">Quality Certificates</h4>
               <div className="text-sm text-muted-foreground">
-                <p>• Purity tests completed: 15</p>
-                <p>• Stability tests completed: 12</p>
-                <p>• Pending certifications: 2</p>
+                <p className="font-mono">• Purity tests completed: 15</p>
+                <p className="font-mono">• Stability tests completed: 12</p>
+                <p className="font-mono">• Pending certifications: 2</p>
               </div>
             </div>
 
             <div className="space-y-2">
               <h4 className="font-medium">Distribution Status</h4>
               <div className="text-sm text-muted-foreground">
-                <p>• Active distributions: 5</p>
-                <p>• Delivered batches: 8</p>
-                <p>• In transit: 2</p>
+                <p className="font-mono">• Active distributions: 5</p>
+                <p className="font-mono">• Delivered batches: 8</p>
+                <p className="font-mono">• In transit: 2</p>
               </div>
             </div>
           </div>

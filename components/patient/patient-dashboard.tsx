@@ -40,19 +40,19 @@ export function PatientDashboard() {
                 Your Safety
               </h4>
               <div className="space-y-2">
-                <div className="flex items-center gap-2 text-sm">
+                <div className="flex items-center gap-2 text-sm font-mono">
                   <Badge variant="outline" className="bg-green-50">
                     <CheckCircle className="h-3 w-3 mr-1" />
                     Secure
                   </Badge>
-                  <span>Blockchain-verified medications</span>
+                  <span className="text-sm font-mono">Blockchain-verified medications</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <Badge variant="outline" className="bg-blue-50">
                     <Info className="h-3 w-3 mr-1" />
                     Protected
                   </Badge>
-                  <span>Your privacy is protected</span>
+                  <span className="font-mono text-xs">Your privacy is protected</span>
                 </div>
               </div>
             </div>
@@ -60,20 +60,20 @@ export function PatientDashboard() {
             <div className="space-y-2">
               <h4 className="font-medium">How It Works</h4>
               <div className="text-sm text-muted-foreground">
-                <p>1. Enter your verification code</p>
-                <p>2. View your medication details</p>
-                <p>3. Access safety information</p>
-                <p>4. Report any concerns</p>
+                <p className="text-sm font-mono">1. Enter your verification code</p>
+                <p className="font-mono">2. View your medication details</p>
+                <p className="font-mono">3. Access safety information</p>
+                <p className="font-mono">4. Report any concerns</p>
               </div>
             </div>
 
             <div className="space-y-2">
               <h4 className="font-medium">Need Help?</h4>
               <div className="text-sm text-muted-foreground">
-                <p>• Contact your healthcare provider</p>
-                <p>• Call Poison Control: 1-800-222-1222</p>
-                <p>• Emergency: 911</p>
-                <p>• Read our educational resources</p>
+                <p className="font-mono">• Contact your healthcare provider</p>
+                <p className="font-mono">• Call Poison Control: 1-800-222-1222</p>
+                <p className="font-mono">• Emergency: 911</p>
+                <p className="font-mono">• Read our educational resources</p>
               </div>
             </div>
           </div>

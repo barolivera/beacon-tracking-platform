@@ -10,6 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { useAuth } from "@/hooks/use-auth"
 import { Loader2 } from "lucide-react"
+import Image from "next/image"
 
 export function LoginForm() {
   const [email, setEmail] = useState("")
@@ -40,7 +41,9 @@ export function LoginForm() {
       <div className="w-full max-w-md space-y-6">
         <Card>
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl font-bold text-black">Beacon</CardTitle>
+            <div className="flex justify-center mb-2">
+              <Image src="/beacon-logo-black.svg" alt="Beacon" width={120} height={40} className="h-10 w-auto" />
+            </div>
             <CardDescription>Secure blockchain-based pharmaceutical tracking</CardDescription>
           </CardHeader>
           <CardContent>

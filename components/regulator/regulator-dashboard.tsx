@@ -37,14 +37,14 @@ export function RegulatorDashboard() {
                     <AlertTriangle className="h-3 w-3 mr-1" />
                     Pending
                   </Badge>
-                  <span>3 batches awaiting review</span>
+                  <span className="font-mono">3 batches awaiting review</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <Badge variant="outline" className="bg-green-50">
                     <CheckCircle className="h-3 w-3 mr-1" />
                     Approved
                   </Badge>
-                  <span>PT-2024-001 approved today</span>
+                  <span className="font-mono">PT-2024-001 approved today</span>
                 </div>
               </div>
             </div>
@@ -52,20 +52,20 @@ export function RegulatorDashboard() {
             <div className="space-y-2">
               <h4 className="font-medium">System Status</h4>
               <div className="text-sm text-muted-foreground">
-                <p>• Blockchain network: Online</p>
-                <p>• Connected laboratories: 5</p>
-                <p>• Active hospitals: 12</p>
-                <p>• System uptime: 99.9%</p>
+                <p className="font-mono">• Blockchain network: Online</p>
+                <p className="font-mono">• Connected laboratories: 5</p>
+                <p className="font-mono">• Active hospitals: 12</p>
+                <p className="font-mono">• System uptime: 99.9%</p>
               </div>
             </div>
 
             <div className="space-y-2">
               <h4 className="font-medium">Compliance Overview</h4>
               <div className="text-sm text-muted-foreground">
-                <p>• Quality standards: Met</p>
-                <p>• Audit trail: Complete</p>
-                <p>• Data integrity: Verified</p>
-                <p>• Regulatory compliance: 100%</p>
+                <p className="font-mono">• Quality standards: Met</p>
+                <p className="font-mono">• Audit trail: Complete</p>
+                <p className="font-mono">• Data integrity: Verified</p>
+                <p className="font-mono">• Regulatory compliance: 100%</p>
               </div>
             </div>
           </div>
@@ -132,13 +132,13 @@ export function RegulatorDashboard() {
                   <div className="space-y-2 text-sm">
                     <div className="border rounded p-2">
                       <div className="font-medium">Recent Audit: PT-2024-001</div>
-                      <div className="text-muted-foreground">Approved by Carlos Rodriguez</div>
-                      <div className="text-xs text-muted-foreground">2 hours ago</div>
+                      <div className="text-muted-foreground font-mono">Approved by Carlos Rodriguez</div>
+                      <div className="text-xs text-muted-foreground font-mono">2 hours ago</div>
                     </div>
                     <div className="border rounded p-2">
                       <div className="font-medium">Quality Review: PT-2024-002</div>
-                      <div className="text-muted-foreground">Pending quality certificates</div>
-                      <div className="text-xs text-muted-foreground">1 day ago</div>
+                      <div className="text-muted-foreground font-mono">Pending quality certificates</div>
+                      <div className="text-xs text-muted-foreground font-mono">1 day ago</div>
                     </div>
                   </div>
                 </div>
