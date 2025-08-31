@@ -18,6 +18,8 @@ interface BatchFormProps {
 
 export function BatchForm({ onBatchCreated }: BatchFormProps) {
   const { user } = useAuth()
+  console.log("Current user in BatchForm:", user);
+
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
   const [success, setSuccess] = useState("")
@@ -35,43 +37,43 @@ export function BatchForm({ onBatchCreated }: BatchFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!user) return
-
+  
     setIsLoading(true)
     setError("")
     setSuccess("")
-
+  
     try {
-      const batch = await blockchainRegistry.createBatch({
-        batchId: formData.batchId,
-        productName: formData.productName,
-        formula: formData.formula,
-        laboratoryId: user.organizationId!,
-        laboratoryName: user.organizationName!,
-        productionDate: new Date(formData.productionDate),
-        expiryDate: new Date(formData.expiryDate),
-        quantity: Number.parseInt(formData.quantity),
-        unit: formData.unit,
-        qualityCertificates: [],
-        distributionLog: [],
-      })
-
-      setSuccess(
-        `Batch ${batch.batchId} created successfully with blockchain hash: ${batch.blockchainHash.substring(0, 10)}...`,
-      )
-      onBatchCreated(batch)
-
-      // Reset form
-      setFormData({
-        batchId: "",
-        productName: "",
-        formula: "",
-        productionDate: "",
-        expiryDate: "",
-        quantity: "",
-        unit: "tablets",
-      })
+      // Generar IDs de medicamentos
+      const baseId = parseInt(formData.batchId.replace(/\D/g, '')) || Math.floor(Math.random() * 100000);
+      const medicineCount = Math.min(parseInt(formData.quantity) || 1, 10);
+      const medicineIds = Array.from({ length: medicineCount }, (_, i) => baseId + i);
+  
+      // 🔥 USAR TU URL DE RAILWAY
+      const response = await fetch('https://beacon-api-production.up.railway.app/pharma/add-batch', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          // Agregar CORS headers si es necesario
+        },
+        body: JSON.stringify({
+          pharma_address: user.walletAddress || "0x445D72E4705976c4a4737e75d1503B842fD8E2eC",
+          medicine_ids: medicineIds
+        })
+      });
+  
+      const result = await response.json();
+  
+      if (!response.ok) {
+        throw new Error(result.detail || 'API Error');
+      }
+  
+      setSuccess(`Batch registered! TX: ${result.txHash.substring(0, 10)}... Medicine IDs: ${medicineIds.join(', ')}`);
+      
+      // Resto del manejo de éxito...
+  
     } catch (err) {
-      setError("Failed to create batch. Please try again.")
+      const errorMessage = err instanceof Error ? err.message : String(err);
+      setError(`Error: ${errorMessage}`);
     } finally {
       setIsLoading(false)
     }
